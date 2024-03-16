@@ -48,13 +48,53 @@ body{
     color: #FCFCF4;
 }
 
+/* Estilização do add  */
+
+.estilo_dados{
+    vertical-align: top;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.insere_dados{
+    width: 50%;
+    border-width: 2px;
+    border-color: #236C50;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    list-style: circle;
+}
+.recebe_dados{
+    border-radius: 5px;
+    border-color:#B07930;
+    font-size: 13px;
+    width: 100%;
+}
+input[type="submit"]{
+    background-color:#B07930; 
+    color: #FCFCF4;
+    padding: 4px;
+    border-radius: 5px;
+    border-color: #dfa65c;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color o.3s ease;
+}
+input[type="submit"]:hover{
+    background-color: #dfa65c;
+}
+
    /* Estlizaçao do footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: fixed; /* Fixar o footer na parte inferior da página */
+    /* position: fixed; Fixar o footer na parte inferior da página */
     width: 100%;
     bottom: 0; /* Alinhar ao fundo */
 }
