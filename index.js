@@ -11,7 +11,7 @@ for (var i=0; i< clientes.length; i++) {
 
     // Captura o valor unitario do produto
     var unidade = clientes[i].querySelector(".unidade").textContent;
-
+    reais(unidade);
 
     // Verifica se a quantidade é numero valido
     if(qtde < 1 || isNaN(qtde)){
