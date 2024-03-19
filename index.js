@@ -60,7 +60,9 @@ function valUni(unidade) {
 
 // Função para formatar em reais
 function reais(valor) {
-    return "R$ " + valor.toFixed(2).replace(".", ",");
+    var nValor = parseFloat(valor);
+    var x = nValor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+    return x;
 }
 
 
