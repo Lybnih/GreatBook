@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Função para formatar o valor para o padrão de moeda
         function formatarMoeda(valor) {
-            return 'R$ ' + valor.toFixed(2).replace('.', ',');
+           var nValor = parseFloat(valor);
+           var x = nValor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+           return x;
         }
 });
