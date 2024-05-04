@@ -45,9 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 });
 
-/* Apagar linha */
-function apagaLinha(linha) {
-    linha.parentNode.removeChild(linha);
-}
+var tabela = document.querySelector("table");
+
+tabela.addEventListener("dblclick", function(event){
+    event.target.parentNode.classList.add("fadeOut");
+
+    setTimeout(function(){
+        event.target.parentNode.remove();
+    },500)
+    
+})
 
 

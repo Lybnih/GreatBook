@@ -1,5 +1,7 @@
 /* IMportei fonte */
 @import url('https://fonts.googleapis.com/css2? family= EB+Garamond & display=swap');
+
+
 header {
    padding: 0;
    background-color: #E8E7DE;
@@ -54,7 +56,6 @@ body{
     vertical-align: top;
     list-style: none;
     text-align: center;
-    display: flex;
     align-items: center;
 }
 .insere_dados{
@@ -86,6 +87,14 @@ input[type="submit"]{
 }
 input[type="submit"]:hover{
     background-color: #dfa65c;
+}
+
+#mensagens-erro{
+    color: red;
+}
+.fadeOut{
+    opacity: 0;
+    transition: 1s;
 }
 
    /* Estlizaçao do footer */
