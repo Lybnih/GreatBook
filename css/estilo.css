@@ -1,57 +1,175 @@
-/* IMportei fonte */
-@import url('https://fonts.googleapis.com/css2? family= EB+Garamond & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-
-header {
-   padding: 0;
-   background-color: #E8E7DE;
-   display: block;
+/*ESTILOS GERAIS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 body{
-    font-family:'EB Garamond', serif;
+    background-image: url(../assets/fundo/background.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    height: 100vh;
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: white;
 }
 
+header{
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+  }
 
-
-.img_logo{
-    box-sizing: border-box; /* calcular larguras e alturas de acordo com navegador*/
-    display: inline-block;/* Possivel ficar perto de outros elementes */
+section {
+    
+    margin-bottom: 20px; /* Adiciona 20px de margem inferior a cada seção */
 }
 
+/*MENU-LATERAL*/
+nav.menu-lateral{
+    width: 80px;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #236C50;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: .2s;
+
+    z-index: 2;
+}
+
+nav.menu-lateral.expandir{
+    width: 200px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+    margin-top: 80px;
+}
+
+ul li.ativo{
+    background-color: #236C50;
+}
+
+ul li.item-menu{
+    transition: .3s;
+}
+
+ul li.item-menu:hover{
+    background-color: #236C50;
+}
+
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 30px;
+    line-height: 50px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .4s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+main {
+    padding-top: 80px; 
+    padding-left: 150px; 
+    padding-right: 90px;
+    padding-bottom: 60px;
+
+    background-image: url(../assets/fundo/background.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*PEDIDOS*/
+
+section.pedidos {
+    padding: 7% 20%;
+}
+
+  
 .titulo{
-    padding-left: 15px;
+    text-align: left;
+    padding-bottom: 25px;
+    font-weight: bold;
 }
 
 .linha-titulo{
-    border: none; /* Remover a borda padrão da linha */
-    border-bottom: 3px solid #B07930; /* Adicionar uma borda sólida preta na parte inferior */
-    margin: 0 auto 10px; /* Margem superior e inferior de 10px e alinhar a linha no centro */
-    width: 98%; /* Definir a largura da linha */
+    padding-top: 18px;
+    border: none; 
+    border-bottom: 5px solid #B07930; 
+    margin: 0 auto 10px; 
+    width: 100%;
 }
 
-    /* Estilização da tabela */
+/*TABELA*/
 .tabela{ 
-    width: 100%; /* Tamanho */
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.158); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
 }
 
-.tabela td{
-    padding: 7px; /* Espaçamento interno das células de dados */
+.tabela th, .tabela td{
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);;
     text-align: left;
+    color: #000;
 }
-    /* Estilização das células de dados */
+
 .tabela th {
-    background-color: #236C50 ;
-    padding: 7px;
-    color: #FCFCF4;
+    background-color: #236C50;
+    color: #fff;           
 }
 
-/* Estilização do add  */
-
+/* Estilização do add */
+section.add {
+    padding: 3% 0;
+    margin-top: 35%; /* Adiciona uma margem superior para separar da seção anterior */
+}
 .estilo_dados{
     vertical-align: top;
     list-style: none;
@@ -92,16 +210,72 @@ input[type="submit"]:hover{
 #mensagens-erro{
     color: red;
 }
+
 .fadeOut{
     opacity: 0;
     transition: 1s;
 }
 
-#filtrar-tabela{
-    width: 19.5%;
-    height: 35px;
-    margin-bottom: 10px;
+
+/*filtro*/
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
 }
+
+.input {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 18px 16px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+
+  .input::placeholder {
+    color: transparent;
+  }
+  
+  .input:focus::placeholder {
+    color: rgb(131, 128, 128);
+  }
+  
+  .input:focus,.input:not(:placeholder-shown) {
+    background-color: #fff;
+    border: 1px solid #dfa65c;
+    width: 290px;
+    cursor: none;
+    padding: 18px 16px 18px 40px;
+  }
+  
+  .input-container .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: -1;
+    fill: #dfa65c;
+    border: 1px solid #dfa65c;
+  }
+  
+  .input:hover + .icon {
+    transform: rotate(360deg);
+    transition: .2s ease-in-out;
+  }
+  
+  .input:focus + .icon,.input:not(:placeholder-shown) + .icon {
+    z-index: 0;
+    background-color: transparent;
+    border: none;
+  }
 
 .invisivel{
     display: none;
