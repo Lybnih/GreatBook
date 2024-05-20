@@ -10,4 +10,5 @@ Great Book é um projeto de desenvolvimento web. Com foco em recursos de JavaScr
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![JSON Badge](https://img.shields.io/badge/JSON-000?logo=json&logoColor=fff&style=for-the-badge)
 ![Node.js Badge](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=fff&style=flat-square)
+
 *Este projeto está em desenvolvimento e novas funcionalidades serão adicionadas em breve. Fique atento às atualizações!*
