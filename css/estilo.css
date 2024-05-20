@@ -122,6 +122,44 @@ main {
     flex-direction: column;
 }
 
+/*topo*/
+section.topo {
+    width: 100%;
+}
+
+.topo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+.topo .img-topo {
+    max-width: 500px;
+    height: auto;
+}
+
+/*CARROSEL*/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /*PEDIDOS*/
 
 section.pedidos {
@@ -168,7 +206,8 @@ section.pedidos {
 /* Estilização do add */
 section.add {
     padding: 3% 0;
-    margin-top: 35%; /* Adiciona uma margem superior para separar da seção anterior */
+    margin-top: 35%;
+    margin-bottom: 20%;
 }
 .estilo_dados{
     vertical-align: top;
@@ -281,17 +320,52 @@ input[type="submit"]:hover{
     display: none;
 }
 
-   /* Estlizaçao do footer */
+/* Estlizaçao do footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    /* position: fixed; Fixar o footer na parte inferior da página */
     width: 100%;
-    bottom: 0; /* Alinhar ao fundo */
+    position: absolute;
+    background: #181A1C;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 10px;
+    text-align: center; 
+    padding-left: 5%;
 }
 
-footer p {
-    margin: 0; /* Remover margens padrão */
+.linha {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.img_footer {
+    width: 25%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.direitos {
+    margin-top: 20px;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Estilo*/
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to left, #dfa65c, #B07930, #236C50);
+    background-size: 500% 100%;
+    border-radius: 50px;
+    border: 1px solid;
+}
+
+/*seleção de texto*/
+::selection {
+    background-color: #236C50; 
+    color: #ffffff; 
 }
