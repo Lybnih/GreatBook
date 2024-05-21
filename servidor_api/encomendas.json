@@ -1,0 +1,39 @@
+{
+    "encomendas":[
+        {
+            "nome": "Leonardo Dicaprio",
+            "prod": "O Velho e o Mar",
+            "qtde": 2,
+            "unidade": 40,
+            "total": 0
+        },
+        {
+            "nome": "Adele Laurie",
+            "prod": "Indomável",
+            "qtde": 1,
+            "unidade": 37,
+            "total": 0
+        },
+        {
+            "nome": "Harry Styles",
+            "prod": "O ano do pensamento mágico",
+            "qtde": 1,
+            "unidade": 43,
+            "total": 0
+        },
+        {
+            "nome": "Natalie Portman",
+            "prod": "Peitos e ovos",
+            "qtde": 3,
+            "unidade": 65,
+            "total": 0
+        },
+        {
+            "nome": "Emma Watson",
+            "prod": "Minha Vida na Estrada",
+            "qtde": 2,
+            "unidade": 16,
+            "total": 0
+        }
+    ]
+}
