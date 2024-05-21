@@ -196,12 +196,65 @@ section.pedidos {
     border: 1px solid rgba(255, 255, 255, 0.2);;
     text-align: left;
     color: #000;
+    
 }
 
 .tabela th {
     background-color: #236C50;
-    color: #fff;           
+    color: #fff; 
+              
 }
+
+button {
+    width: 15%;
+    font-family: inherit;
+    font-size: 15px;
+    background: #B07930;
+    color: white;
+    fill: rgb(211, 211, 211);
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: 1000;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: #dfa65c;
+  }
+  
+  button:hover .svg-wrapper {
+    transform: scale(1.25);
+    transition: 0.5s linear;
+  }
+  
+  button:hover svg {
+    transform: translateX(1.2em) scale(1.1);
+    fill: #fff;
+  }
+  
+  button:hover span {
+    opacity: 0;
+    transition: 0.5s linear;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
 
 /* Estilização do add */
 section.add {
@@ -368,4 +421,12 @@ footer {
 ::selection {
     background-color: #236C50; 
     color: #ffffff; 
+}
+
+@media screen and (max-width: 1024px) and (max-width: 768px) {
+    
+    button {
+        width: 30%;
+      }
+      
 }

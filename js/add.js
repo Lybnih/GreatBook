@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 });
 
+//remove
 var tabela = document.querySelector("table");
 
 tabela.addEventListener("dblclick", function(event){
