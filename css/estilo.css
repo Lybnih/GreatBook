@@ -423,7 +423,15 @@ footer {
     color: #ffffff; 
 }
 
-@media screen and (max-width: 1024px) and (max-width: 768px) {
+@media screen and (max-width: 1024px){
+    
+    button {
+        width: 30%;
+      }
+      
+}
+
+@media screen and (max-width: 768px){
     
     button {
         width: 30%;

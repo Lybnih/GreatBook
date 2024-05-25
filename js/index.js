@@ -15,34 +15,27 @@ for (var i=0; i< clientes.length; i++) {
     clientes[i].querySelector(".unidade").textContent = reais(unidade);
 
     // Verifica se a quantidade é numero valido
-    if(qtde < 1 || isNaN(qtde)){
+    if (!valQtde(qtde)) {
         clientes[i].querySelector(".qtde").textContent = "Quantidade inválida";
-        clientes[i].querySelector(".qtde").style.color="red";
-        clientes[i].querySelector(".total").textContent = 0;
-    } else if(!valUni(unidade)){
-        // A quantiade esta certa, pode prosseguir
-        // Exibe o valor total
-        clientes[i].querySelector(".total").textContent = calculaTotal(qtde,unidade);
-        clientes[i].style.backgroundColor="red";
+        clientes[i].querySelector(".qtde").style.color = "red";
         clientes[i].querySelector(".total").textContent = reais(0);
-    } else{
+    } else if (!valUni(unidade)) {
+        clientes[i].querySelector(".unidade").textContent = "Valor inválido";
+        clientes[i].querySelector(".unidade").style.color = "red";
+        clientes[i].querySelector(".total").textContent = reais(0);
+    } else {
         // A quantidade e o valor unitário estão corretos, pode prosseguir
         var total = calculaTotal(qtde, unidade);
+        clientes[i].querySelector(".unidade").textContent = reais(unidade);
         clientes[i].querySelector(".total").textContent = reais(total);
     }
-
 
 }
 
 
 // Função para calcular o valor total
 function calculaTotal(qtde, unidade){
-    var total = 0;
-
-
-    total = qtde * unidade;
-
-
+    var total = parseFloat(qtde) * parseFloat(unidade);
     return total;
 }
 

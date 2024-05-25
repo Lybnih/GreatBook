@@ -57,4 +57,56 @@ tabela.addEventListener("dblclick", function(event){
     
 })
 
+function adicionaEncomenda(encomenda) {
+    const tabelaIndex = document.querySelector(".tabela");
+    const tabelaBody = tabelaIndex.querySelector("tbody");
+    const novaLinha = tabelaBody.insertRow();
+
+    novaLinha.classList.add("cliente");
+    novaLinha.setAttribute("ondblclick", "apagaLinha(this)");
+
+    novaLinha.insertCell(0).textContent = encomenda["nome"];
+    novaLinha.insertCell(1).textContent = encomenda["prod"];
+    novaLinha.insertCell(2).textContent = encomenda["qtde"];
+    //novaLinha.insertCell(3).textContent = encomenda["unidade"];
+   // novaLinha.insertCell(4).textContent = encomenda["total"];
+
+     // Verificação e formatação do valor unitário
+     var unitario = encomenda["unidade"];
+     if (valUni(unitario)) {
+         novaLinha.insertCell(3).textContent = formatarMoeda(unitario);
+     } else {
+         novaLinha.insertCell(3).textContent = "Valor inválido";
+     }
+     // Calcular e formatar o valor total
+     var qtde = encomenda["qtde"];
+     if (valQtde(qtde) && valUni(unitario)) {
+         var total = parseFloat(qtde) * parseFloat(unitario);
+         novaLinha.insertCell(4).textContent = formatarMoeda(total);
+     } else {
+         novaLinha.insertCell(4).textContent = formatarMoeda(0);
+     }
+
+
+
+    novaLinha.cells[0].classList.add("nome");
+    novaLinha.cells[1].classList.add("prod");
+    novaLinha.cells[2].classList.add("qtde");
+    novaLinha.cells[3].classList.add("unidade");
+    novaLinha.cells[4].classList.add("total");
+
+}
+
+function valQtde(qtde) {
+    return !isNaN(qtde) && qtde > 0;
+}
+
+function valUni(unitario) {
+    return !isNaN(unitario) && unitario > 0;
+}
+
+function formatarMoeda(valor) {
+    return parseFloat(valor).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+}
+
 
