@@ -18,8 +18,8 @@ async function buscarFrase() {
   
   // Função para traduzir a frase usando a API do Google Translate
   async function traduzirFrase(texto) {
-    const apiKey = 'YOUR_API_KEY'; // Substitua pela sua chave API
-    const url = `https://translation.googleapis.com/language/translate/v2?key=${ve8ricuivgtiio07gfc6nt9p7m60l2u}&source=en&target=pt&q=${encodeURIComponent(texto)}`;
+    const apiKey = 'AIzaSyD9wIUx_Pv1O5EgjDd73Mz8I0zTVKpiNcY';
+    const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}&source=en&target=pt&q=${encodeURIComponent(texto)}`;
     const response = await fetch(url);
     const data = await response.json();
     return data.data.translations[0].translatedText;
