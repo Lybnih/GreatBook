@@ -11,4 +11,21 @@ Great Book é um projeto de desenvolvimento web. Com foco em recursos de JavaScr
 ![JSON Badge](https://img.shields.io/badge/JSON-000?logo=json&logoColor=fff&style=for-the-badge)
 ![Node.js Badge](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=fff&style=flat-square)
 
-*Este projeto está em desenvolvimento e novas funcionalidades serão adicionadas em breve. Fique atento às atualizações!*
+## **Funcionalidades:**
+
+- **Lista de Encomendas:** Exibe uma tabela organizada com informações sobre as encomendas de livros.
+- **Adicionar Encomenda:** Permite inserir novas encomendas com campos para nome do cliente, produto, quantidade e valor.
+- **Busca de Livros:** Permite pesquisar livros por título ou autor.
+- **Frase do dia:** O usuário pode gerar frases motivacionais para inspirar sua jornada literária.
+- **Servidor JSON:** O projeto utiliza um servidor JSON para gerenciar os dados da biblioteca
+
+## **Integração com APIs:**
+
+- **Tradução de textos:** Traduz o título dos livros para outros idiomas utilizando a API de tradução do Google.
+- **Busca de informações sobre livros:** Permite pesquisar livros por título ou autor, utilizando a API de livros do Google para obter informações adicionais como capa, descrição e autor.
+- **Geração de frases motivacionais:** O usuário pode gerar frases motivacionais para inspirar sua jornada literária.
+
+
+
+
+*Este projeto está em constante desenvolvimento, sinta-se à vontade para colaborar com ideias, sugestões ou código!*
