@@ -42,6 +42,12 @@
                 </a>
             </li>
             <li class="item-menu">
+                <a href="#livros">
+                    <span class="icon"><i class="bi bi-book"></i></span>
+                    <span class="txt-link">Biblioteca</span>
+                </a>
+            </li>
+            <li class="item-menu">
                 <a href="#frases">
                     <span class="icon"><i class="bi bi-star-fill"></i></span>
                     <span class="txt-link">Frase</span>
@@ -87,8 +93,8 @@
                     grabCursor: true,
                     loop: true,
                     autoplay: {
-                delay: 1500, // Intervalo de 3 segundos entre cada transição
-            },
+                        delay: 1500, // Intervalo de 3 segundos entre cada transição
+                    },
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,
@@ -96,146 +102,167 @@
                 });
             </script>
 
-        </section>
+        </section><!--topo-->
 
-        <section id="pedidos" class="pedidos"></section>
-        <!-- titulo da lista -->
-        <h2 class="titulo">Lista de Encomendas</h2>
+        <section id="pedidos" class="pedidos">
+            <!-- titulo da lista -->
+            <h2 class="titulo">Lista de Encomendas</h2>
 
-        <!-- Filtrando -->
-        <div class="input-container">
-            <label for="filtraTabela"></label>
-            <input class="input" type="text" id="filtrar-tabela" placeholder="Digite o nome do cliente...">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
-                <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-                <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <rect fill="white"></rect>
-                    <path
-                        d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM9 11.5C9 10.1193 10.1193 9 11.5 9C12.8807 9 14 10.1193 14 11.5C14 12.8807 12.8807 14 11.5 14C10.1193 14 9 12.8807 9 11.5ZM11.5 7C9.01472 7 7 9.01472 7 11.5C7 13.9853 9.01472 16 11.5 16C12.3805 16 13.202 15.7471 13.8957 15.31L15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L15.31 13.8957C15.7471 13.202 16 12.3805 16 11.5C16 9.01472 13.9853 7 11.5 7Z"
-                        clip-rule="evenodd" fill-rule="evenodd"></path>
-                </g>
-            </svg>
-        </div>
-
-        <hr class="linha-titulo">
-
-        <!-- Tabela de encomenda -->
-        <table class="tabela">
-<tbody>
-            <tr class="clientes">
-                <th class="titulo">Nome</th>
-                <th class="titulo">Produto</th>
-                <th class="titulo">Quantidade</th>
-                <th class="titulo">Valor unitário</th>
-                <th class="titulo">Total</th>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Livia</td>
-                <td class="prod">Orgulho e preconceito</td>
-                <td class="qtde">2</td>
-                <td class="unidade">65</td>
-                <td class="total"></td>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Caio</td>
-                <td class="prod">A sutil arte de ligar o f*da-se</td>
-                <td class="qtde">8</td>
-                <td class="unidade">45</td>
-                <td class="total"></td>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Suzana</td>
-                <td class="prod">Diário de um Banana 16: Bola Fora</td>
-                <td class="qtde">2</td>
-                <td class="unidade">41</td>
-                <td class="total"></td>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Ingrid</td>
-                <td class="prod">Divina Comédia</td>
-                <td class="qtde">6</td>
-                <td class="unidade">80</td>
-                <td class="total"></td>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Bruno</td>
-                <td class="prod">Soldados não choram</td>
-                <td class="qtde">10</td>
-                <td class="unidade">13.89</td>
-                <td class="total"></td>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Gustavinho</td>
-                <td class="prod">Amor de Redenção</td>
-                <td class="qtde">2</td>
-                <td class="unidade">40</td>
-                <td class="total"></td>
-            </tr>
-        </tbody>
-        </table>
-
-        <button id="buscar-encomendas" class="botao">
-            <div class="svg-wrapper-1">
-            <div class="svg-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="30"
-                height="30"
-                class="icon"
-              >
-                <path
-                  d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z"
-                ></path>
-              </svg>
+            <!-- Filtrando -->
+            <div class="input-container">
+                <label for="filtraTabela"></label>
+                <input class="input" type="text" id="filtrar-tabela" placeholder="Digite o nome do cliente...">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                    <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <rect fill="white"></rect>
+                        <path
+                            d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM9 11.5C9 10.1193 10.1193 9 11.5 9C12.8807 9 14 10.1193 14 11.5C14 12.8807 12.8807 14 11.5 14C10.1193 14 9 12.8807 9 11.5ZM11.5 7C9.01472 7 7 9.01472 7 11.5C7 13.9853 9.01472 16 11.5 16C12.3805 16 13.202 15.7471 13.8957 15.31L15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L15.31 13.8957C15.7471 13.202 16 12.3805 16 11.5C16 9.01472 13.9853 7 11.5 7Z"
+                            clip-rule="evenodd" fill-rule="evenodd"></path>
+                    </g>
+                </svg>
             </div>
-          </div>
-          <span>Buscar Encomendas</span></button>
+
+            <hr class="linha-titulo">
+
+            <!-- Tabela de encomenda -->
+            <table class="tabela">
+                <tbody>
+                    <tr class="clientes">
+                        <th class="titulo">Nome</th>
+                        <th class="titulo">Produto</th>
+                        <th class="titulo">Quantidade</th>
+                        <th class="titulo">Valor unitário</th>
+                        <th class="titulo">Total</th>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Livia</td>
+                        <td class="prod">Orgulho e preconceito</td>
+                        <td class="qtde">2</td>
+                        <td class="unidade">65</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Caio</td>
+                        <td class="prod">A sutil arte de ligar o f*da-se</td>
+                        <td class="qtde">8</td>
+                        <td class="unidade">45</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Suzana</td>
+                        <td class="prod">Diário de um Banana 16: Bola Fora</td>
+                        <td class="qtde">2</td>
+                        <td class="unidade">41</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Ingrid</td>
+                        <td class="prod">Divina Comédia</td>
+                        <td class="qtde">6</td>
+                        <td class="unidade">80</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Bruno</td>
+                        <td class="prod">Soldados não choram</td>
+                        <td class="qtde">10</td>
+                        <td class="unidade">13.89</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Gustavinho</td>
+                        <td class="prod">Amor de Redenção</td>
+                        <td class="qtde">2</td>
+                        <td class="unidade">40</td>
+                        <td class="total"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button id="buscar-encomendas" class="botao">
+                <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class="icon">
+                            <path
+                                d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <span>Buscar Encomendas</span>
+            </button>
         </section><!--Pedidos-->
 
         <section id="add" class="add">
             <h2 class="titulo">Adicionar Encomenda:</h3>
                 <hr class="linha-titulo">
 
-                <section class="estilo_dados">
+                <div class="estilo_dados">
 
                     <form name="add" method="post">
-                        <br>
 
                         <div class="insere_dados">
-                            <label for="nome">Nome:</label>
+                            <label for="nome"><span>Nome:</label>
                             <input type="text" id="nome" name class="recebe_dados" required>
-                        </div>
-
-                        <div class="insere_dados">
+                            
                             <label for="produto">Produto:</label>
                             <input type="text" id="produto" name class="recebe_dados" required>
-                        </div>
-
-                        <div class="insere_dados">
+                        
                             <label for="qtde">Quantidade:</label>
                             <input type="number" id="qtde" name min="1" class="recebe_dados" required>
-                        </div>
 
-                        <div class="insere_dados">
                             <label for="unidade">Valor Unitário:</label>
                             <input type="number" id="unidade" min="1" name class="recebe_dados" required>
                         </div>
-
-                        <br>
-                        <br>
+                        <div class="botao">
                         <input type="submit" value="Adicionar">
-                        <br>
+                        </div>
                     </form>
-                </section>
+                </div>
         </section><!--add-->
+
+        <section id="livros" class="livros">
+            <h2 class="titulo">Busca de Livros:</h2>
+
+            <!-- buscando -->
+            <div class="input-container">
+
+                <label for="filtraTabela"></label>
+                <input class="input" type="text" id="busca-livro" placeholder="Digite o titulo ou autor...">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                    <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <rect fill="white"></rect>
+                        <path
+                            d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM9 11.5C9 10.1193 10.1193 9 11.5 9C12.8807 9 14 10.1193 14 11.5C14 12.8807 12.8807 14 11.5 14C10.1193 14 9 12.8807 9 11.5ZM11.5 7C9.01472 7 7 9.01472 7 11.5C7 13.9853 9.01472 16 11.5 16C12.3805 16 13.202 15.7471 13.8957 15.31L15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L15.31 13.8957C15.7471 13.202 16 12.3805 16 11.5C16 9.01472 13.9853 7 11.5 7Z"
+                            clip-rule="evenodd" fill-rule="evenodd"></path>
+                    </g>
+                </svg>
+            </div>
+            <hr class="linha-titulo">
+
+            <div class="container-livros">
+                <div id="resultados-livros"></div>
+
+            </div>
+        </section><!--livros-->
 
         <section id="frases" class="frases">
             <h2 class="titulo">Frase do dia:</h2>
-            <button id="gerar-frase">Gerar Frase</button>
-            <div id="frases-result"></div> <!-- Aqui serão exibidas as frases -->
-        </section>
+
+                <button id="gerar-frase" class="botao">
+                        <div class="svg-wrapper">
+                            <img src="assets/imagens/idea-svgrepo-com.svg"  viewBox="0 0 24 24" width="30" height="30" class="icon">
+                    </div>
+                        <span>Gerar frase</span>
+                    </button>
+                    <hr class="linha-titulo">
+                <div id="frases-result"></div> <!-- Aqui serão exibidas as frases -->
+            
+        </section><!--Frases-->
 
     </main>
 
@@ -254,7 +281,8 @@
     <script src="js/menu.js"></script>
     <script src="js/buscar-encomenda.js"></script>
     <script src="js/frases.js"></script>
-
+    <script src="js/livros.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
