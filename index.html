@@ -57,8 +57,10 @@
 
     </nav>
     <!-- Menu lateral -->
+
     <main>
 
+        <!--topo-->
         <section id="topo" class="topo">
             <img src="assets/imagens/logo.png" class="img-topo">
             <!-- Swiper -->
@@ -82,28 +84,9 @@
                 <div class="swiper-pagination"></div>
             </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-            <!-- Initialize Swiper -->
-            <script>
-                var swiper = new Swiper(".mySwiper", {
-                    slidesPerView: 4,
-                    centeredSlides: true,
-                    spaceBetween: 30,
-                    grabCursor: true,
-                    loop: true,
-                    autoplay: {
-                        delay: 1500, // Intervalo de 3 segundos entre cada transição
-                    },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                });
-            </script>
-
         </section><!--topo-->
 
+        <!--pedidos-->
         <section id="pedidos" class="pedidos">
             <!-- titulo da lista -->
             <h2 class="titulo">Lista de Encomendas</h2>
@@ -195,6 +178,7 @@
             </button>
         </section><!--Pedidos-->
 
+        <!--add-->
         <section id="add" class="add">
             <h2 class="titulo">Adicionar Encomenda:</h3>
                 <hr class="linha-titulo">
@@ -204,12 +188,12 @@
                     <form name="add" method="post">
 
                         <div class="insere_dados">
-                            <label for="nome"><span>Nome:</label>
+                            <label for="nome">Nome:</label>
                             <input type="text" id="nome" name class="recebe_dados" required>
-                            
+
                             <label for="produto">Produto:</label>
                             <input type="text" id="produto" name class="recebe_dados" required>
-                        
+
                             <label for="qtde">Quantidade:</label>
                             <input type="number" id="qtde" name min="1" class="recebe_dados" required>
 
@@ -217,12 +201,13 @@
                             <input type="number" id="unidade" min="1" name class="recebe_dados" required>
                         </div>
                         <div class="botao">
-                        <input type="submit" value="Adicionar">
+                            <input type="submit" value="Adicionar">
                         </div>
                     </form>
                 </div>
         </section><!--add-->
 
+        <!--livros-->
         <section id="livros" class="livros">
             <h2 class="titulo">Busca de Livros:</h2>
 
@@ -247,21 +232,31 @@
             <div class="container-livros">
                 <div id="resultados-livros"></div>
 
+                <!-- Modal -->
+                <div class="janela-modal" id="janela-modal">
+                    <div class="modal">
+                        <button class="fechar" id="fechar">X</button>
+                        <div class="modal-conteudo">
+                        </div>
+                    </div>
+                </div><!-- Modal -->
             </div>
+
         </section><!--livros-->
 
+        <!--Frases-->
         <section id="frases" class="frases">
             <h2 class="titulo">Frase do dia:</h2>
+            <button id="gerar-frase" class="botao">
 
-                <button id="gerar-frase" class="botao">
-                        <div class="svg-wrapper">
-                            <img src="assets/imagens/idea-svgrepo-com.svg"  viewBox="0 0 24 24" width="30" height="30" class="icon">
-                    </div>
-                        <span>Gerar frase</span>
-                    </button>
-                    <hr class="linha-titulo">
-                <div id="frases-result"></div> <!-- Aqui serão exibidas as frases -->
-            
+                <div class="svg-wrapper">
+                    <img src="assets/imagens/idea-svgrepo-com.svg" viewBox="0 0 24 24" width="30" height="30"
+                        class="icon">
+                </div>
+                <span>Gerar frase</span>
+            </button>
+            <hr class="linha-titulo">
+            <div id="frases-result"></div> <!-- Aqui serão exibidas as frases -->
         </section><!--Frases-->
 
     </main>
@@ -276,13 +271,21 @@
     </footer>
 
     <script src="js/index.js"></script>
-    <script src="js/add.js"></script>
-    <script src="js/filtrar.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/buscar-encomenda.js"></script>
-    <script src="js/frases.js"></script>
-    <script src="js/livros.js"></script>
+    <!--Slider topo-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <!--Menu-->
+    <script src="js/menu.js"></script>
+    <!--Tabela-->
+    <script src="js/filtrar.js"></script>
+    <script src="js/buscar-encomenda.js"></script>
+    <script src="js/adicionarEncomendasTabela.js"></script>
+    <!--Adicionar-->
+    <script src="js/add.js"></script>
+    <!--API's-->
+    <script src="js/livros.js"></script>
+    <script src="js/frases.js"></script>
+    
 </body>
 
 </html>
