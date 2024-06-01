@@ -25,7 +25,9 @@ Great Book é um projeto de desenvolvimento web. Com foco em recursos de JavaScr
 - **Busca de informações sobre livros:** Permite pesquisar livros por título ou autor, utilizando a API de livros do Google para obter informações adicionais como capa, descrição e autor.
 - **Geração de frases motivacionais:** O usuário pode gerar frases motivacionais para inspirar sua jornada literária.
 
+## **De uma olhada:**
 
+https://github.com/Lybnih/GreatBook/assets/132515156/80a968d0-f8f5-4ddb-93c4-078efec1da5b
 
 
 *Este projeto está em constante desenvolvimento, sinta-se à vontade para colaborar com ideias, sugestões ou código!*
