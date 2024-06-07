@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     buscaInput.addEventListener('input', function () {
         const termoBusca = buscaInput.value.toLowerCase();
         const apiKey = 'AIzaSyCPOYHvQlHv0KDx0odIJqjU1cLQbeQHna0'; // Substitua pela sua própria chave de API
-        const maxResults = 12;
+        const maxResults = 16;
 
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(termoBusca)}&key=${apiKey}&maxResults=${maxResults}`)
             .then(response => response.json())
