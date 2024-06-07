@@ -458,14 +458,14 @@ section.livros {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.274);
     padding: 15px;
     text-align: left;
-    max-height: 390px;
+    max-height: 375px;
     overflow: hidden;
     cursor: pointer;
 }
 
 .livro img {
     width: 100%;
-    height: 200px;
+    height: 240px;
     margin-bottom: 10px;
     border-radius: 5px;
 }
@@ -481,7 +481,7 @@ section.livros {
 
 .livro img.sem-capa {
     width: 100%;
-    height: 200px;
+    height: 240px;
     background-color: #ddd;
     border: 1px solid #ccc;
     display: flex;
